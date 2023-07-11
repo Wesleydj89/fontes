@@ -1,0 +1,23 @@
+p::after {
+    content: " &";
+}
+
+#p1::first-letter {
+    font-size: 150%;
+    color: blueviolet;
+}
+
+a[href^="http"] {
+    color: pink;
+}
+
+a[href$=".xlsx"] {
+    color: green;
+}
+
+input[type=checkbox]+label {
+    font-weight: bold;
+    color: rgb(218, 29, 29);
+    font-size: 200%;
+    border-radius: 100%;
+}

@@ -1,0 +1,52 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+}
+
+h1:after {
+    content: "";
+    background-image: linear-gradient(120deg, #e5ea15, #00c4ff);
+    width: 90%;
+    height: 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) skew(-50deg);
+}
+
+td {
+    border: solid 1px gray;
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    display: inline-block;    
+}
+
+/*
+table tr:nth-child(1){
+    background-color: rgb(147, 171, 192);
+}
+
+table tr:nth-last-child(1){
+    background-color: rgb(42, 125, 202);
+}
+
+table tr:nth-last-child(3){
+    background-color: rgb(42, 125, 202);
+}
+*/
+
+table tr:nth-child(even) {                    /* Linas Pares */
+    background-color: rgb(27, 143, 52);
+}
+
+table tr:nth-child(odd) {                     /* Linas Impares */
+    background-color: rgb(114, 226, 138);
+}

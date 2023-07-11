@@ -1,0 +1,26 @@
+body {
+    background-image: url(bg.jpg);
+    height: 3000px;    
+}
+
+#div1, #div2 {
+    width: 500px;
+    height: 700px;
+}
+
+#div1 {
+    background-color: blue;
+}
+
+#div2 {
+    background-color: yellow;
+}
+
+#div3 {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    position: sticky;
+    bottom: 30px;
+    top: 30px;
+}

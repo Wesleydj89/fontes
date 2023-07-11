@@ -1,0 +1,75 @@
+/* Padronizar documento - cross browser */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: antiquewhite;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap;             Quebra de Linha */
+    flex-flow: row nowrap;
+    height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-evenly;
+   }
+
+div {
+    /* height: 120px; */
+    width: 30%;
+    border: dotted 2px black;
+    font-size: 60px;
+    text-align: center;
+    line-height: 120px;
+}
+
+#div3 {
+    /* flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 200px; */
+    flex: 0 0 200px;
+    align-self: flex-end;
+}
+
+
+
+
+/* #div1, #div2, #div7 {
+height: 150px;
+ }
+ */
+
+
+/* div {
+    flex-grow: 1;
+}
+
+#div3 {
+    flex-grow: 2;
+}
+
+#div5 {
+    flex-grow: 0.5;
+} */
+
+
+/*
+DIRECIONAMENTO
+flex-direction: row;
+
+
+ORDENS
+#div1 { order: 3;}
+#div2 { order: 5;}
+#div3 { order: 2;}
+#div4 { order: 1;}
+#div5 { order: 7;}
+#div6 { order: 4;}
+#div7 { order: 6;}
+
+
+*/

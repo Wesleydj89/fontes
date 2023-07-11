@@ -1,0 +1,123 @@
+<style>
+    *, p, div{
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: xx-small !important;
+    }
+    td, th{
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-align: left !important;
+        height: 12px !important;
+        font-size: 8px !important;
+        vertical-align: top !important;
+        padding: 2px !important;
+    }
+    b, strong{        
+        font-weight: bold !important;
+    }
+    table{
+        width: 100% !important;
+        margin: 2px !important;
+        padding: 2px !important;
+        border-collapse: collapse;
+        border: 1px solid !important;
+    }
+</style>
+<body>
+    <div class='container'>
+        <htmlpageheader name='header'>
+            <table>
+                <tr>
+                    <td style='width:30%'><img style='height: 75px;' src='DIRLOGO/logo.png' alt='logo' /></td>
+                    <td style='width:30%;text-align:center;padding-top:30px'>
+                        <h1>ORDEM DE CARREGAMENTO</h1>
+                    </td>
+                    <td style='width:40%; text-align:right;font-size: xx-small;'>
+                        <p style='font-size: xx-small'>{{empresa_emissora}}<br/>
+                                {{endereco_emissora}}<br/>
+                                {{cep_emissora}} - {{municipio_emissora}}, {{uf_emissora}} - BRAZIL<br/>
+                                PHONE: {{telefone_emissora}}<br/><br/>
+                                {{site}}</p>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><strong>PEDIDO:</strong> {{pedido}}</td>
+                        <td style='text_align:center'><strong>DATE:</strong> {{date}}</td>
+                        <td style='text_align:right'><strong>PAGINA: {PAGENO}</strong></td>
+                </tr>
+            </table>
+        </htmlpageheader>
+        <sethtmlpageheader name='header' value='on' show-this-page='1' />
+        <htmlpagefooter name='footer'>
+            <table style='border: none;'>
+                <tr>
+                    <td style='border-top: 1px solid;text-align:right;'>
+                        <p><b>{PAGENO}/{nbpg}</b></p>
+                    </td>
+                </tr>
+            </table>
+        </htmlpagefooter>
+        <sethtmlpagefooter name='footer' value='on' show-this-page='1' />
+        <table>
+            <tr>
+                <td style='border: 1px solid; border-right:none'>
+                    <table style='border: none'>
+                        <tr>
+                            <th style='width:34px !important; text-align:left'>CLIENTE: </th>
+                            <td style='width:340px !important;'>
+                                <p>{{empresa}}<br/></p>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style='width:34px !important; text-align:left'>MOTORISTA: </th>
+                            <td style='width:340px !important;'>
+                                <p>{{motorista}}<br/></p>		 
+												 
+                            </td>
+                        </tr>
+                         <tr>
+                            <th style='width:34px !important; text-align:left'>VENDEDOR: </th>
+                            <td style='width:340px !important;'>
+                                <p>{{vendedor_nome}}<br/></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>                
+            </tr>
+        </table>
+		{{tag_produtos}}
+        <table style='border: none'>
+                <tr>		
+		         <th style='padding: 2px; border-left: 1px solid;'>Unidades</th>
+                 <td style='padding: 2px; '>{{pacotes}}</td>
+		        </tr>
+                <tr>
+                    <th style='padding: 2px; border-left: 1px solid;'>Peso Liq.</th>
+                    <td style='padding: 2px; '>{{peso_liq}}</td>
+			    </tr>
+                <tr>
+                    <th style='padding: 2px; border-left: 1px solid;'>Peso Bruto</th>
+                    <td style='padding: 2px; '>{{peso_bruto}}</td>                    
+				</tr>	
+				<tr>
+                    <th style='padding: 2px; border-left: 1px solid;'>Total M2</th>
+                    <td style='padding: 2px; '>{{total_m2}}</td>                    
+                </tr>  
+        </table>
+        <br><br>
+        <table style='border: none'>
+            <tr>
+						 
+                <th style='padding: 5px; border-left: 1px solid;'></th>            
+            </tr>
+            <tr>
+                <th style='padding: 5px; border-left: 1px solid;'></th>            
+            </tr>
+            <tr>
+                <th style='padding: 5px; border-left: 1px solid;'> ASSINATURA CONFERENTE : ______________________________________________________________________________________
+                </th>            
+			</tr>
+        </table>
+    </div>
+</body>
